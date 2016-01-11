@@ -1,0 +1,30 @@
+<div id="register-dialog" class="mfp-dialog clearfix">
+    <i class="fa fa-edit dialog-icon"></i>
+    <h3>Your Information</h3>
+    <h5>Please provide me with your contact information and I will be in touch with you as soon as possible!</h5>
+    <form ng-submit="submit(contactform)" name="contactform" method="post" action="" class="dialog-form" role="form">
+        <div class="form-group" ng-class="{ 'has-error': contactform.inputName.$invalid && submitted }">
+            <div class="form-group">
+                <label for="inputName">Name</label>
+                <input ng-model="formData.inputName" type="text" class="form-control" id="inputName" name="inputName" placeholder="Your Name" required>
+            </div>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': contactform.inputEmail.$invalid && submitted }">
+            <label for="inputEmail">Email</label>
+            <input ng-model="formData.inputEmail" type="email" class="form-control" id="inputEmail" name="inputEmail" placeholder="Your Email" required>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': contactform.inputPhone.$invalid && submitted }">
+            <label for="inputPhone">Phone</label>
+            <input ng-model="formData.inputPhone" type="number" class="form-control" id="inputPhone" name="inputPhone" placeholder="Your Phone Number" required>
+        </div>
+        <div class="form-group" ng-class="{ 'has-error': contactform.inputMessage.$invalid && submitted }">
+            <label for="inputMessage">Message</label>
+            <textarea ng-model="formData.inputMessage" class="form-control" rows="4" id="inputMessage" name="inputMessage" placeholder="Your message..." required></textarea>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default" ng-disabled="submitButtonDisabled">
+                    Send Message
+                </button>
+        </div>
+    </form>
+</div>

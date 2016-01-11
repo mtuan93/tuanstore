@@ -1,0 +1,18 @@
+[
+	{
+		"id": 1,
+		"name": "Book 1",
+		"price": "$50",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas possimus ipsam sequi similique facere reiciendis minus, ex beatae blanditiis non odio. Rem harum alias facere beatae optio excepturi, corrupti aliquam.",
+		"condition": "Used",
+		"image": "http://www.wollemipine.co.uk/acatalog/Wallpaper_CollectorsEdition800x600.jpg"
+	},
+	{
+		"id": 2,
+		"name": "Book 2",
+		"price": "$100",
+		"description": "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas possimus ipsam sequi similique facere reiciendis minus, ex beatae blanditiis non odio. Rem harum alias facere beatae optio excepturi, corrupti aliquam.",
+		"condition": "New",
+		"image": "http://www.wollemipine.co.uk/acatalog/Wallpaper_CollectorsEdition800x600.jpg"
+	}
+]
