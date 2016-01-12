@@ -1,10 +1,16 @@
 'use strict';
 
 // Declare app level module which depends on views, and components
-var myApp = angular.module('myApp', ['ngRoute']);
+var myApp = angular.module('myApp', ['ngRoute', 'firebase']).constant('FIREBASE_URL', 'https://tuanstore.firebaseio.com/');;
 myApp.run(['$rootScope', '$location',
 	function($rootScope, $location) {
-        $rootScope.length = 0;
+        var itemString = localStorage.getItem('items');
+        if(itemString && itemString !== 'null') {
+            $rootScope.items = JSON.parse(itemString);
+            $rootScope.length = $rootScope.items.length;
+        } else {
+            $rootScope.length = 0;
+        }
 		$rootScope.$on("$routeChangeStart", function(event, next, current) {
             $rootScope.path = $location.$$path;
         });

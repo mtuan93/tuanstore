@@ -13,6 +13,6 @@ myApp.controller('BookCtrl', function($scope, $http, $rootScope) {
     		$rootScope.items = [item];
             $rootScope.length = 1;
     	}
-    	debugger;
+    	localStorage.setItem('items', JSON.stringify($rootScope.items));
     };
 });

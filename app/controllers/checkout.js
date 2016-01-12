@@ -12,6 +12,7 @@ myApp.controller('CheckoutCtrl', function($scope, $http, $rootScope, $location) 
         }
         $rootScope.length -= 1;
         $scope.data = $rootScope.items;
+        localStorage.setItem('items', JSON.stringify($rootScope.items));
     };
 
     $scope.canSendOrder = function() {

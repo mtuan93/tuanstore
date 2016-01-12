@@ -24,10 +24,14 @@
         </div>
         <div class="gap"></div>
     </div>  
-    <div ng-click="sendOrder()" class="row" ng-show="{{path === '/checkout'}}">
+    <div ng-show="canSendOrder()" ng-click="sendOrder()" class="row" ng-show="{{path === '/checkout'}}">
         <a class="btn btn-primary btn-lg center-block">
-            <span ng-show="canSendOrder()">Send your orders!</span>
-            <span ng-hide="canSendOrder()">You have no items in cart!</span>
+            <span>Send your orders!</span>
+        </a>
+    </div>
+    <div ng-hide="canSendOrder() || {{path !== '/checkout'}}" class="row">
+        <a class="btn btn-danger btn-lg center-block disabled">
+            <span>You have no items in cart!</span>
         </a>
     </div>
 </div>
